@@ -6,9 +6,15 @@ require('dotenv').config()
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
-app.use(cors())
+const corsOptions = {
+    origin: ["http://localhost:3000", "https://your-frontend-url.com"], // Replace with your frontend URL
+    methods: ["GET", "POST"],
+    credentials: true
+};
 
-const port = process.env.PORT
+app.use(cors(corsOptions));
+
+const port = process.env.PORT || 8000;
 
 
 app.get("/", (req, res) => {
