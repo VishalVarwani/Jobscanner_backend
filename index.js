@@ -11,10 +11,9 @@ app.use(cors())
 const port = process.env.PORT
 
 
-app.get("/",(req,res)=>{
-    req.json("hello")
-})
-
+app.get("/", (req, res) => {
+    res.json("hello");
+});
 
 app.post("/",async(req,res)=>{
     const{email,password}=req.body
