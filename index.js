@@ -7,7 +7,7 @@ const app = express()
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 const corsOptions = {
-    origin: ["http://localhost:3000", "https://your-frontend-url.com"], // Replace with your frontend URL
+    origin: ["http://localhost:3000", "https://jobscanner-pb9s.onrender.com"], // Replace with your frontend URL
     methods: ["GET", "POST"],
     credentials: true
 };
